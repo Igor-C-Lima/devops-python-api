@@ -8,9 +8,10 @@ client = TestClient(app)
 
 @pytest.fixture(autouse=True)
 def clear_tasks() -> None:
-    """Isola os testes, limpando o armazenamento em memória."""
+    """Isola os testes, limpando o armazenamento em memória"""
 
     tasks.clear()
+
 
 
 def test_health_returns_version() -> None:
